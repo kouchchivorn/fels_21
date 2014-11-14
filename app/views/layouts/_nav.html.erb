@@ -1,0 +1,18 @@
+<div role="tabpanel">
+  <ul class="nav nav-tabs" role="tablist" id="myTab">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#wordlist" aria-controls="wordlist" role="tab" data-toggle="tab">Word List</a></li>
+    <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Categories</a></li>
+    <li role="presentation"><a href="#lesson" aria-controls="lesson" role="tab" data-toggle="tab">Lesson</a></li>
+    <li role="presentation"><a href="#result" aria-controls="result" role="tab" data-toggle="tab">Result</a></li>
+    <li role="presentation"><a href="#usershow" aria-controls="usershow" role="tab" data-toggle="tab">User Show</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade  in active" id="home"><%= render file: "static_pages/home" %></div>
+    <div role="tabpanel" class="tab-pane fade" id="wordlist"><%= render 'static_pages/wordlist' %></div>
+    <div role="tabpanel" class="tab-pane fade" id="categories"><%= yield %></div>
+    <div role="tabpanel" class="tab-pane fade" id="lesson"><%= yield %></div>
+    <div role="tabpanel" class="tab-pane fade" id="result"><%= yield %></div>
+    <div role="tabpanel" class="tab-pane fade" id="usershow"><%= yield %></div>
+</div>
