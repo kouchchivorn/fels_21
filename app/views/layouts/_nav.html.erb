@@ -10,7 +10,7 @@
 
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade  in active" id="home"><%= render file: "static_pages/home" %></div>
-    <div role="tabpanel" class="tab-pane fade" id="wordlist"><%= render 'static_pages/wordlist' %></div>
+    <div role="tabpanel" class="tab-pane fade" id="wordlist"><%= render file: "words/index" %></div>
     <div role="tabpanel" class="tab-pane fade" id="categories"><%= yield %></div>
     <div role="tabpanel" class="tab-pane fade" id="lesson"><%= yield %></div>
     <div role="tabpanel" class="tab-pane fade" id="result"><%= yield %></div>
