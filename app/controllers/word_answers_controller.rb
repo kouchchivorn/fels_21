@@ -1,0 +1,2 @@
+class WordAnswersController < ApplicationController
+end

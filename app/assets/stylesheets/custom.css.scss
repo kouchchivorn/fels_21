@@ -1,0 +1,306 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 120px;
+  font-family:Helvetica,Arial,sans-serif;
+  background-color:#dedede;
+  font-weight: 200;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  width: auto;
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  clear: both;
+  float: left;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* content */
+
+#content {
+  border: 5px 5px 5px 5px solid;
+  border-color: #777;
+}
+
+/* navigation */
+
+#nav {
+  a {
+    color: #555;
+    &:hover {
+      color: #11f;
+    }
+  }
+}
+
+#myTab li {
+  a{
+    overflow: hidden;
+    color: #555;
+    &:hover {
+      color: #33f;
+    }
+    &:focus {
+    outline: none;
+    }
+  }
+}
+
+#myTab {
+  width: 68%;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: auto;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+h1, h2, h3 {
+  font-weight:200;
+  margin:0;
+  padding:0;
+  color:#444;
+}
+
+h1 {
+  border-bottom:1px solid #666;
+  margin-bottom:20px;
+}
+
+p {
+  margin:0 0 15px 0;
+  padding:0;
+}
+
+input, select, textarea {
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:12px;
+}
+
+input {
+  padding:2px;
+}
+
+form div {
+  margin-bottom:15px;
+}
+
+form div.checkboxes label {
+  display: inline;
+}
+
+form div label, form div label.block {
+  display: block;
+  font-style:normal;
+}
+
+form div.field_with_errors {
+  margin-bottom:0;
+}
+
+form div.field_with_errors label {
+  color:#900;
+}
+
+
+
+#wrapper {
+  width:68%;
+  margin:0 auto;
+  background-color:#fff;
+  padding:2% 5%;
+  padding-bottom: 7%;
+  box-shadow:0 0 15px #999;
+}
+
+header h2 {
+  text-align:right;
+  font-size:20px;
+  text-transform: uppercase;
+  margin-top:10px;
+}
+
+header h3 {
+  text-align:right;
+  font-size:14px;
+  text-transform: uppercase;
+  margin-bottom:20px;
+}
+
+div.flash {
+  padding:10px;
+  margin-bottom:20px;
+  background-color:#efefef;
+}
+
+div.flash.notice {
+  color:#090;
+}
+
+div.flash.alert {
+  color:#900;
+}
+
+/* sign up form */
+
+.inner_content{
+  float: left;
+  width: 65%;
+  min-width: 250px;
+}
+
+.inner-form{
+  max-width: 300px;
+  margin-left: 20px;
+  font-style: none;
+}
+
+.inner-title {
+  text-align: left;
+  margin-top: 30px;
+  width: 100%;
+  min-width: 250px;
+  border-bottom: none;
+}
+
+footer {
+  width: 65%;
+}
+
+.inline {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  span {
+    font-weight: normal;
+  }
+}
+
+/* gravatar header */
+.gravatar-header {
+  color: #fff;
+}
+
+/* add-margin */
+
+.add-margin {
+  margin-top: 10px;
+}
+
+#nav {
+  float: left;
+}
+
+tr {
+
+}
