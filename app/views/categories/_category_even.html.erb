@@ -1,0 +1,25 @@
+<%= form_for object.lessons.build do |f| %>
+<tr>
+    <td>
+        <div class=<%= "empty_side" %>>
+        </div>
+    </td>
+    <td class=<%=  "category_side" %>>
+        <table>
+            <tr>
+                <td><%= object %></td>
+                <td><%= "You\'ve learned #{Word.learned(current_user.id, object.id).count}" %>
+                </td>
+            </tr>
+            <tr>
+                <td col="2"> <%=  object.description %> </td>
+            </tr>
+            <tr>
+                <td col="2">
+                    <%= f.submit "Start Lesson", class: "btn btn-primary" %>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr
+<% end %>
