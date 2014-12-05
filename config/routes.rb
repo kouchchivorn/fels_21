@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   post 'signin' => 'sessions#create'
   delete 'signout' => 'sessions#destroy'
   resources :words
-  resources :categories, only: [:index]
-  resources :lessons, only: [:index]
+  resources :categories
+  resources :lessons
 end
