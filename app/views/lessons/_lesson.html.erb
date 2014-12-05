@@ -1,20 +1,17 @@
 <tr>
     <% if params[:controller] != "activities" && params[:controller] != "static_pages" %>
-    <td>
-        <%=  "Lesson #{lesson.id}" %>
-    </td>
-    <% if params[:controller] == "lessons" %>
-    <td>
-        <%= link_to "Start lesson", lesson, class: "btn btn-primary" %>
-    </td>
-    <% end %>
-    <td>
-        <%= link_to "Last Performance", result_path(lesson) %>
-    </td>
-
-    <% else %>
+        <td><%=  "Lesson #{lesson.id}" %></td>
+        <% if params[:controller] == "lessons" %>
+            <td>
+                <%= link_to "Start lesson", lesson, class: "btn btn-primary" %>
+            </td>
+        <% end %>
         <td>
-            <%= "Learned#{lesson.result || 0}/#{lesson.lesson_words.count} words in Lesson \"#{lesson.category.name}\" on #{lesson.updated_at.strftime("%Y/%m/%d")}" %>
+            <%= link_to "Last Performance", result_path(lesson) %>
+        </td>
+    <% elsif lesson.result != 0 %>
+        <td>
+            <%= "Learned#{lesson.result}/#{lesson.lesson_words.count} words in Lesson \"#{lesson.category.name}\" on #{lesson.updated_at.strftime("%Y/%m/%d")}" %>
         </td>
     <% end %>
 </tr>
