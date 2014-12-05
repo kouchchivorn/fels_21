@@ -434,3 +434,29 @@ footer {
     text-transform: uppercase;
 }
 
+.side{
+    float: left;
+    padding: 20px 100px 0 0;
+}
+
+.user_show{
+    padding-top: 100px;
+    text-align: left;
+    float: left;
+    width: 500px;
+    border-left: 1px solid;
+    border-color: #999;
+    padding-left: 90px;
+}
+
+.home{
+    padding-top: 10px;
+}
+
+.large{
+    width: 140px;
+    height: 60px;
+    font: 30px bold;
+    margin: 0 50px 30px 0;
+}
+

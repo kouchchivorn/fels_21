@@ -1,0 +1,4 @@
+<div class="side">
+    <%= gravatar_for @current_user, size: 100  %><br><%= @current_user.name %><br>
+    <%= "learned #{Word.learned(@current_user.id,nil).count} words" %>
+</div>
