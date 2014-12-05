@@ -1,0 +1,15 @@
+<h1 class="capital"><%= @lesson.category %> Lesson <%= @lesson.id %> </h1>
+<h2 class="blue capital"> Result <%= @lesson.result %>/20</h2>
+<div class="results">
+    <table class="table">
+        <thead class="bold capital">
+            <td> Word Learned </td>
+            <td> Your Answer </td>
+            <td> True or False </td>
+            <td> Correct Answer </td>
+        </thead>
+        <tbody>
+            <%= render "result" %>
+        </tbody>
+    </table
+</div>

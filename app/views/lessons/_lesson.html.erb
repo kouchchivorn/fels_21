@@ -1,0 +1,13 @@
+<tr>
+    <td>
+        <%=  "Lesson #{lesson.id}" %>
+    </td>
+    <% if params[:controller] == "lessons" %>
+    <td>
+        <%= link_to "Start lesson", lesson, class: "btn btn-primary" %>
+    </td>
+    <% end %>
+    <td>
+        <%= link_to "Last Performance", result_path(lesson) %>
+    </td>
+</tr>
