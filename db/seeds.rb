@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 #Create Category
-Category.create!(name: "Basic 500")
-Category.create!(name: "At a Restaurant")
-Category.create!(name: "On a Trip")
+Category.create!(name: "Basic 500", description: Faker::Lorem.paragraphs(5..8))
+Category.create!(name: "At a Restaurant", description: Faker::Lorem.paragraphs(5..8))
+Category.create!(name: "On a Trip", description: Faker::Lorem.paragraphs(5..8))
 
 #Create Word
 3.times do |m|

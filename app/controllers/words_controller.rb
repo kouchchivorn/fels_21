@@ -9,25 +9,25 @@ class WordsController < ApplicationController
         end
 
         if params[:category_id].blank?
-            if params[:learn] == "all"
-                @words = Word.paginate page: params[:page], per_page: 20
-            elsif params[:learn] == "learned"
+            if params[:learn] == "learned"
                 @words = Word.learned(current_user.id, params[:category_id])
                 .paginate page: params[:page], per_page: 20
-            else
+            elsif params[:learn] == "not_learned"
                 @words = Word.not_learned(current_user.id, params[:category_id])
                 .paginate page: params[:page], per_page: 20
+            else
+                @words = Word.paginate page: params[:page], per_page: 20
             end
         else
-            if params[:learn] == "all"
-                category = Category.find(params[:category_id])
-                @words = category.words.paginate page: params[:page], per_page: 20
-            elsif params[:learn] == "learned"
+            if params[:learn] == "learned"
                 @words = Word.learned(current_user.id, params[:category_id])
                 .paginate page: params[:page], per_page: 20
-            else
+            elsif params[:learn] == "not_learned"
                 @words = Word.not_learned(current_user.id, params[:category_id])
                 .paginate page: params[:page], per_page: 20
+            else
+                category = Category.find(params[:category_id])
+                @words = category.words.paginate page: params[:page], per_page: 20
             end
         end
     end
