@@ -18,7 +18,7 @@ class LessonsController < ApplicationController
         @lesson = Lesson.find params[:id]
         if @lesson.update_attributes(lesson_param)
             flash[:success] = "Great! lesson completed."
-            redirect_to root_path
+            redirect_to result_path
         else
             flash[:error] = "Sorry, there is an error"
             render "show"
@@ -36,4 +36,6 @@ class LessonsController < ApplicationController
                 lesson.lesson_words.create(word_id: word.id)
             end
         end
+
+
 end

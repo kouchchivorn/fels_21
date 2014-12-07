@@ -5,7 +5,12 @@
     <li id="Category"><%= link_to "Category", categories_path %></li>
 
     <li><%= link_to "Lesson", lessons_path %></li>
-    <li><%= link_to "Result", "#" %></li>
+    <li><% if params[:lesson].blank? %>
+                <%= link_to "Result", results_path %>
+            <% else %>
+                <%= link_to "Result", result_path(params[:lesson]) %>
+            <% end %>
+    </li>
     <li><%= link_to "User Show", "#" %></li>
   </ul>
 </div>

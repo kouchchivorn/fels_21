@@ -1,0 +1,16 @@
+<% @lesson.lesson_words.each do |lesson_word| %>
+    <tr>
+        <td>
+            <%= lesson_word.word %>
+        </td>
+        <td>
+            <%= lesson_word.word_answer %>
+        </td>
+        <td id="correct" class="center">
+            <%= lesson_word.word_answer.try(:correct?) ? raw("<span class=""correct"">O</span>") : raw("<span class=""incorrect"">X</span>") %>
+        </td>
+        <td>
+            <%= lesson_word.word.word_answers.correct %>
+        </td>
+    </tr>
+<% end %>

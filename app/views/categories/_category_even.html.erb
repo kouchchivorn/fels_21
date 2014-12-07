@@ -1,4 +1,6 @@
 <%= form_for object.lessons.build do |f| %>
+<table class="table" id="category_table">
+        <tbody>
 <tr>
     <td>
         <div class="empty_side">
@@ -16,10 +18,12 @@
                 <td>
                     <%= f.hidden_field :category_id %>
                     <%= f.hidden_field :user_id %>
-                    <%= f.submit "Start Lesson", class: "btn btn-primary" %>
+                    <%= f.submit "Start Lesson", class: "btn btn-primary start_lesson" %>
                 </td>
             </tr>
         </table>
     </td>
-</tr
+</tr>
+</tbody>
+</table>
 <% end %>

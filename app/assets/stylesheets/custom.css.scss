@@ -318,6 +318,7 @@ footer {
     border-radius: 50px;
     border: solid;
     padding: 15px;
+    width: 300px;
 }
 
 .bold {
@@ -407,3 +408,29 @@ footer {
 #lesson label:hover {
      background:#DDD;
 }
+
+ #correct {
+    padding: 0 40px 0 0;
+    font-size: 25px;
+}
+
+.center {
+    text-align: center;
+}
+
+.incorrect {
+    color: #f41;
+}
+
+.correct {
+    color: #2e3;
+}
+
+.blue {
+    color: #25f;
+}
+
+.capital{
+    text-transform: uppercase;
+}
+
