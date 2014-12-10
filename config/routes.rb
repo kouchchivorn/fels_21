@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root 'static_pages#home'
   get 'about'   => 'static_pages#about'
   get 'contact'  => 'static_pages#contact'
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   post 'signin' => 'sessions#create'
   delete 'signout' => 'sessions#destroy'
   resources :words
-  resources :categories, only: [:index]
-  resources :lessons, only: [:index]
+  resources :categories
+  resources :lessons
+  resources :results
 end

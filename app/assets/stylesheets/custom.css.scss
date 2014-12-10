@@ -318,8 +318,119 @@ footer {
     border-radius: 50px;
     border: solid;
     padding: 15px;
+    width: 300px;
 }
 
 .bold {
     font-weight: bold;
 }
+
+.word{
+    padding-top: 60px;
+    margin-right: 0;
+    float: left;
+    min-width: 300px;
+    min-height: 120px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.word_answer{
+    margin-top: 10px;
+    min-width: 180px;
+    margin-left: 300px;
+    padding-left: -20px;
+}
+
+.lesson_word_content{
+    display: none;
+}
+
+#lesson_word_content_1{
+    display: block;
+}
+
+.previous {
+    margin-left: 300px;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+#previous_1{
+    display: none;
+}
+#previous_20, #next_1{
+    margin-left: 350px;
+}
+
+#next_20{
+    display: none;
+}
+.next {
+    margin-top: 30px;
+}
+#lesson ul{
+    list-style-type: none;
+    margin: 20px 0 0 0;
+}
+
+#lesson ul li {
+    float: left;
+    position: relative;
+}
+#lesson label, #lesson input {
+    display:block;
+    float: left;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+#lesson input[type="radio"] {
+    opacity:0.01;
+    z-index:100;
+}
+
+#lesson input[type="radio"]:checked + label,
+.Checked + lable{
+    background:#17d;
+}
+
+#lesson label {
+     text-align: center;
+     padding:5px;
+     border-radius: 20px;
+     cursor:pointer;
+     z-index:90;
+     width: 200px;
+}
+
+#lesson label:hover {
+     background:#DDD;
+}
+
+ #correct {
+    padding: 0 40px 0 0;
+    font-size: 25px;
+}
+
+.center {
+    text-align: center;
+}
+
+.incorrect {
+    color: #f41;
+}
+
+.correct {
+    color: #2e3;
+}
+
+.blue {
+    color: #25f;
+}
+
+.capital{
+    text-transform: uppercase;
+}
+
