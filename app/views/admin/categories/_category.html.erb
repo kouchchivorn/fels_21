@@ -1,0 +1,8 @@
+<div id ="category_content">
+    <% if category.id % 2 == 0 %>
+    <%= render "category_even", object: category %>
+    <% else %>
+        <%= render "category_odd", object: category %>
+    <% end %>
+</div>
+

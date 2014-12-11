@@ -14,4 +14,10 @@ Rails.application.routes.draw do
   resources :lessons
   resources :results
   resources :activities
+  namespace :admin do
+    root "admin#index"
+    resources :users
+    resources :categories
+    resources :words
+  end
 end
