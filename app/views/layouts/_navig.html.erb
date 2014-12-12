@@ -1,16 +1,11 @@
 <div role="tabpanel">
   <ul class="nav nav-tabs" role="tablist" id="myTab">
-    <li><%= link_to "Home", root_path, "data-toggle" => :tab %></li>
+    <li><%= link_to "Home", root_path%></li>
     <li><%= link_to "Word List", words_path %></li>
     <li id="Category"><%= link_to "Category", categories_path %></li>
 
     <li><%= link_to "Lesson", lessons_path %></li>
-    <li><% if params[:lesson].blank? %>
-                <%= link_to "Result", results_path %>
-            <% else %>
-                <%= link_to "Result", result_path(params[:lesson]) %>
-            <% end %>
-    </li>
-    <li><%= link_to "User Show", "#" %></li>
+    <li><%= link_to "Result", results_path %></li>
+    <li><%= link_to "User Show", activities_path %></li>
   </ul>
 </div>

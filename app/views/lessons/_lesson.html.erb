@@ -1,4 +1,5 @@
 <tr>
+    <% if params[:controller] != "activities" && params[:controller] != "static_pages" %>
     <td>
         <%=  "Lesson #{lesson.id}" %>
     </td>
@@ -10,4 +11,10 @@
     <td>
         <%= link_to "Last Performance", result_path(lesson) %>
     </td>
+
+    <% else %>
+        <td>
+            <%= "Learned#{lesson.result || 0}/#{lesson.lesson_words.count} words in Lesson \"#{lesson.category.name}\" on #{lesson.updated_at.strftime("%Y/%m/%d")}" %>
+        </td>
+    <% end %>
 </tr>

@@ -1,4 +1,11 @@
-
+<% if signed_in? %>
+    <%= render "shared/side" %>
+    <div class="user_show home">
+        <%= link_to "Words", words_path, class: "btn btn-primary large" %>
+        <%= link_to "Lesson", categories_path, class: "btn btn-primary large" %>
+        <%= render "shared/activities" %>
+    </div>
+<% else %>
 <div class="center inner_content">
   <h1 class="add-margin">Welcome to Framgia E-Learning</h1>
 
@@ -8,4 +15,5 @@
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary add-margin" %>
 </div>
+<% end %>
 
