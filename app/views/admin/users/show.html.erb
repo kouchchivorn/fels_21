@@ -1,0 +1,14 @@
+<div class="side">
+    <%= gravatar_for @user, size: 100  %><br><%= @user.name %><br>
+    <%= "learned #{Word.learned(@current_user.id,nil).count} words" %>
+</div>
+<div class="user_show">
+    <label>Name: </label>
+    <span><%= @user.name %></span>
+    <lable>Email: </label>
+    <span><%= @user.email %></span>
+    <label>Created at: </label>
+    <span><%= @user.signed_up_at %></span>
+    <label>Updated at: </label>
+    <span><%= @user.last_updated_at %></span>
+</div>

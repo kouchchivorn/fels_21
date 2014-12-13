@@ -1,4 +1,5 @@
 class WordsController < ApplicationController
+    before_action :user_sign_in
     def new
         @word = Word.new
     end

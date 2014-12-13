@@ -21,6 +21,13 @@ $(document).on("page:change", function(){
     });
 });
 
-
-
+$(document).on("page:change", function(){
+    $(".word_answer_item").on("click",function(){
+        $this=$(this);
+        $(".word_answer_item").each(function(){
+            $(this).prop("checked", false);
+        })
+        $this.prop("checked",true);
+    });
+});
 

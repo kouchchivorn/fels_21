@@ -1,0 +1,27 @@
+<h1> User List </h1>
+<div class="span6 offset1">
+    <%= form_for admin_users_path, {method: :get} do %>
+        <span> User </span>
+        <%= text_field_tag "name", params[:name] %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+</div>
+<div class="span6 offset3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Signup at</th>
+                <th>Updated at</th>
+                <th>Image </th>
+                <th>Changes </th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= render @users %>
+        </tbody>
+    </table>
+    <%= link_to "New User", new_admin_user_path, class: "btn btn-primary" %>
+</div>

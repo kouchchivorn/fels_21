@@ -1,0 +1,8 @@
+<%= form_for [:admin, @category] do |f| %>
+    <% render "shared/error_messages", object: f.object %>
+    <%= f.label :name, class: "name_field" %>
+    <%= f.text_field :name, autofocus: true %><br>
+    <%= f.label :description, class: "description_label" %>
+    <%= f.text_area :description, class: "description_text" %><br>
+    <%= f.submit label, class: "btn btn-primary" %>
+<% end %>

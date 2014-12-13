@@ -4,7 +4,7 @@
 <div class=" row inner_content">
   <div class="span6 offset3 inner-form">
     <%= form_for [:admin, @user] do |f| %>
-      <%= render 'fields', f: f %>
+      <%= render 'field', f: f %>
       <%= f.submit "Create my account", class: "btn btn-large btn-primary", id: "create_account" %>
     <% end %>
   </div>

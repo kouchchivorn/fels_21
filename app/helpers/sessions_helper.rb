@@ -1,5 +1,9 @@
 module SessionsHelper
 
+    def admin?
+        current_user && current_user.admin?
+    end
+
     def sign_in(user)
         session[:user_id] = user.id
         params[:learn] = "all"
@@ -35,11 +39,22 @@ module SessionsHelper
         user == current_user
     end
 
-    def signed_in_user
+    def user_sign_in
         unless signed_in?
             store_location
             redirect_to signin_url, notice: "Please sign in."
         end
+    end
+
+    def admin_sign_in
+        unless admin?
+            flash[:error] = "Permission denied"
+            redirect_to root_path
+        end
+    end
+
+    def redirect_to_admin(path)
+        redirect_to path if admin?
     end
 
     def forget(user)

@@ -39,6 +39,18 @@ class User < ActiveRecord::Base
         BCrypt::Password.new(remember_digest).is_password?(remember_token)
     end
 
+    def last_updated_at
+        updated_at.strftime "%h %d, %Y %l:%M %p"
+    end
+
+    def signed_up_at
+        created_at.strftime "%h %d, %Y %I:%M %p"
+    end
+
+    scope :search, ->(name) do
+        where("name LIKE ?", "%#{name}%")
+    end
+
     private
 
         def create_remember_token

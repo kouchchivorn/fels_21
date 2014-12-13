@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :results
   resources :activities
   namespace :admin do
-    root "admin#index"
+    get "/" => "words#index"
     resources :users
     resources :categories
     resources :words

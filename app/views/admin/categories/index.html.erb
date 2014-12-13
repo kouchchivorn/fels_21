@@ -1,6 +1,24 @@
-<h2> Begin a lesson, and you are on the way to speak Japanese!</h2>
-
+<h1> Categories List</h1>
+<div class="span6 offset1">
+    <%= form_tag admin_categories_path, {method: :get} do %>
+        <span>Category</span>
+        <%= text_field_tag :name, params[:name], autofocus: true %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+</div>
 <div class="span6 offset3">
-    <%= render @categories %>
-    <%= render @categories %>
+    <table class="table">
+        <thead>
+            <tr>
+                <th> No. </th>
+                <th> Name </th>
+                <th> Description </th>
+                <th> Options </th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= render @categories %>
+        </tbody>
+    </table>
+    <%= link_to "Create new category", new_admin_category_path, class: "btn btn-primary" %>
 </div>

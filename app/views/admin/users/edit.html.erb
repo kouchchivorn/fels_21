@@ -1,0 +1,7 @@
+<h1>Edit User Profile </h1>
+<div class="span6 offset3 inner-form">
+    <%= form_for [:admin, @user] do |f| %>
+      <%= render 'field', f: f %>
+      <%= f.submit "Save", class: "btn btn-large btn-primary", id: "create_account" %>
+    <% end %>
+  </div>

@@ -5,6 +5,10 @@ class Category < ActiveRecord::Base
     validates_presence_of :name
     validates_uniqueness_of :name
 
+    scope :search, -> (content) do
+        where("name LIKE ?", "%#{content}%")
+    end
+
     def to_s
         name
     end

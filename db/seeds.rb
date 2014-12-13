@@ -6,6 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+#Create Admin
+User.create!(name: "Chivorn",
+                      email: "kouchchivorn@yahoo.com",
+                      password: "123456",
+                      password_confirmation: "123456",
+                      admin: true)
+#Create Normal User
+User.create!(name: "Kouch Chivorn",
+                      email: "kouchchivorn5@yahoo.com",
+                      password: "123456",
+                      password_confirmation: "123456")
+
 #Create Category
 Category.create!(name: "Basic 500", description: Faker::Lorem.paragraphs(5..8))
 Category.create!(name: "At a Restaurant", description: Faker::Lorem.paragraphs(5..8))
@@ -34,21 +46,13 @@ words = Word.order(:created_at).all
     end
 end
 
-#Create User
-User.create!(name: "Kouch Chivorn",
-                      email: "kouchchivorn5@yahoo.com",
-                      password: "123456",
-                      password_confirmation: "123456")
-
-
-
 #Create Lesson, when starting lessons in a category every words
 # of which must be used, in which lessonwords are created instantly
 # afterward and word_answer_id is set to NULL by default
 
 2.times do |n|
     3.times do |m|
-        user_id = 1
+        user_id = 2
         category_id = n +1
         result = rand(16..20)
         Lesson.create!(user_id: user_id,
